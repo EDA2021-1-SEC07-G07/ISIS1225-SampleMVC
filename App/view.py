@@ -60,6 +60,12 @@ def loadTags():
     return controller.loadTags('GoodReads/tags.csv')
 
 
+def loadBooksTags():
+    """
+    Carga los Book-Tags
+    """
+    return controller.loadBooksTags('GoodReads/book_tags-small.csv')
+
 """
 Menu principal
 """
@@ -78,8 +84,10 @@ while True:
     
     elif int(inputs[0]) == 3:
         print("Cargando información de libros con sus respectivos tags....")
-        book_tags = loadTags()
-        print('Total de libros con tags cargados: ' ) # falta corregir el controller porque sino no se ejecutará nada
+
+        book_tags = loadBooksTags()
+        print('Total de libros con tags cargados: ' ) #Falta completar la función loadBooksTags() del controller en el próximo lab para obtener el resultado.
+
 
     else:
         sys.exit(0)
